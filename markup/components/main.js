@@ -19,15 +19,19 @@
         errorPlacement: function (error, element) {},
 
         submitHandler: function() {
-            $(".modal-good").addClass('visible');
-            $('#my-form').trigger( 'reset' );
             var form_data = $(this).serialize(); //собераем все данные из формы
             $.ajax({
                 type: "POST", //Метод отправки
-                url: "send.php", //путь до php фаила отправителя
+                url: '/mail.php', //путь до php фаила отправителя
                 data: form_data,
+                cache: false,
+                processData: false,
+                contentType: false,
                 success: function() {
-                    alert("Ваше сообщение отпрвлено!");
+                    $(".modal").removeClass('visible');
+                    $(".modal-good, .overlay").addClass('visible');
+                    $('#my-price-form').trigger( 'reset' );
+                    setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
                 }
             });
         },
@@ -93,19 +97,23 @@
 
         errorPlacement: function (error, element) {},
 
-        submitHandler: function() {
-            $(".modal-good, .overlay").addClass('visible');
-            $('#my-form-map').trigger( 'reset');     
-            var form_data = $(this).serialize(); //собераем все данные из формы
-            $.ajax({
-                type: "POST", //Метод отправки
-                url: "send.php", //путь до php фаила отправителя
-                data: form_data,
-                success: function() {
-                    alert("Ваше сообщение отпрвлено!");
-                }
-            });     
-        },
+            submitHandler: function() {
+                var form_data = $(this).serialize(); //собераем все данные из формы
+                $.ajax({
+                    type: "POST", //Метод отправки
+                    url: '/mail.php', //путь до php фаила отправителя
+                    data: form_data,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success: function() {
+                        $(".modal").removeClass('visible');
+                        $(".modal-good, .overlay").addClass('visible');
+                        $('#my-price-form').trigger( 'reset' );
+                        setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
+                    }
+                });
+            },
     });
 
     $('#my-price-form').validate({
@@ -129,7 +137,6 @@
         errorPlacement: function (error, element) {},
 
         submitHandler: function() {
-           
             var form_data = $(this).serialize(); //собераем все данные из формы
             $.ajax({
                 type: "POST", //Метод отправки
@@ -139,12 +146,14 @@
                 processData: false,
                 contentType: false,
                 success: function() {
+                    $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
                     $('#my-price-form').trigger( 'reset' );
                     setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
                 }
             });
-            }
+        },
+        
         });
 
     $('#my-direction-form').validate({
@@ -168,8 +177,21 @@
         errorPlacement: function (error, element) {},
 
         submitHandler: function() {
-            $(".modal-good, .overlay").addClass('visible');
-            $('#my-direction-form').trigger( 'reset' );
+            var form_data = $(this).serialize(); //собераем все данные из формы
+            $.ajax({
+                type: "POST", //Метод отправки
+                url: '/mail.php', //путь до php фаила отправителя
+                data: form_data,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function() {
+                    $(".modal").removeClass('visible');
+                    $(".modal-good, .overlay").addClass('visible');
+                    $('#my-price-form').trigger( 'reset' );
+                    setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
+                }
+            });
         },
     });
 

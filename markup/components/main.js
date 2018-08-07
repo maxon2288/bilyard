@@ -254,13 +254,13 @@
         hide: { effect: "fade", duration: 150 },
         show: { effect: "fade", duration: 150 },
     });
-    var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper1 = new Swiper('.reviews__container', {
 		spaceBetween: 30,
         slidesPerView: 3,
         speed: 400,
         navigation: {
-            nextEl: '.train .swiper-button-next',
-            prevEl: '.train .swiper-button-prev',
+            nextEl: '.reviews__container .swiper-button-next',
+            prevEl: '.reviews__container .swiper-button-prev',
         },
         breakpoints: {
             1020: {
@@ -272,7 +272,43 @@
         },
     });
 
-    var mySwiper = new Swiper('.client__container', {
+    var mySwiper1 = new Swiper('.services-slider', {
+		spaceBetween: 30,
+        slidesPerView: 3,
+        speed: 400,
+        navigation: {
+            nextEl: '.services-slider .swiper-button-next',
+            prevEl: '.services-slider .swiper-button-prev',
+        },
+        breakpoints: {
+            1020: {
+                slidesPerView: 2,
+            },
+            425: {
+                slidesPerView: 1,
+            }
+        },
+    });
+
+    var mySwiper1 = new Swiper('.galery-slider', {
+		spaceBetween: 30,
+        slidesPerView: 3,
+        speed: 400,
+        navigation: {
+            nextEl: '.galery-slider .swiper-button-next',
+            prevEl: '.galery-slider .swiper-button-prev',
+        },
+        breakpoints: {
+            1020: {
+                slidesPerView: 2,
+            },
+            425: {
+                slidesPerView: 1,
+            }
+        },
+    });
+
+    var mySwiper2 = new Swiper('.client__container', {
 		spaceBetween: 30,
         slidesPerView: 5,
         speed: 400,
@@ -308,12 +344,11 @@ var trainSlider3 = new Swiper('.train-slider', {
     slidesPerView: 'auto',
     speed: 400, 
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.train__button.swiper-button-next',
+        prevEl: '.train__button.swiper-button-prev',
     },
 
 });
-
 
 trainSlider3.on('slideChangeTransitionEnd', function () {
     var title = $(".swiper-slide-active img").data('title');
@@ -326,25 +361,20 @@ trainSlider3.on('slideChangeTransitionEnd', function () {
     
 });
 
-var trainSlider = new Swiper('.tab-slider', {
+var trainSlider2 = new Swiper('.tab-slider', {
     slidesPerView: 5,
     slidesPerView: 'auto',
     speed: 400,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
 });
 
-var trainSlider = new Swiper('.swiper-container-galery', {
+var trainSlider1 = new Swiper('.swiper-container-galery', {
     spaceBetween: 10,
     slidesPerView: 2,
     slidesPerColumn: 3,
     speed: 400,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: 'swiper-container-galery .swiper-button-next',
+        prevEl: 'swiper-container-galery .swiper-button-prev',
     },
 
 });

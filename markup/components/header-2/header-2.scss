@@ -1,0 +1,161 @@
+.header-2{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    align-items: flex-start;
+    z-index: 1;
+    padding-top: 32px;
+    padding-bottom: 27px;
+
+    .wrapper{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    &__close{
+        cursor: pointer;
+        display: none;
+        justify-content: flex-start;
+        width: 100%;   
+        @media screen and (max-width: 768px){
+            display: flex;
+        }
+    }
+    &__menu-open{
+        flex-direction: column;
+        justify-content: space-around;
+        height: 40px;
+        width: 50px;
+        display: none;
+        @media screen and (max-width: 768px){
+            display: flex;
+        }
+        span{
+            height: 5px;
+            background: #fff;
+        }
+    }
+    &__right{
+        max-width: 1300px;
+        width: 100%;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        @media screen and (max-width: 1100px){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        @media screen and (max-width: 768px){
+            position: fixed;
+            right: 0;
+            top: 0;
+            max-width: 290px;
+            align-items: center;
+            z-index: 10000000;
+            padding: 20px;
+            justify-content: flex-start;
+            height: 100%;
+            background-color: #025cb2;
+            visibility: hidden;
+            opacity: 0;
+            transform: translate(100%);
+            transition: 0.5s;
+            &.visible{
+                visibility: visible;
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+    }
+    &__menu{ 
+        display: flex;
+        max-width: 1000px;
+        width: 100%;
+        font-family: proxima;
+        align-self: flex-start;
+        justify-content: center;
+        @media screen and (max-width: 1100px){
+            align-self: flex-end;
+            margin-bottom: 20px;
+        }
+        
+        a{
+            color: #d0cbea;
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 15px;
+            position: relative;
+            text-transform: uppercase;  
+            margin: 0 10px;
+            &:before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                transform-origin: 50% 50%;
+                transition: 0.3s;
+                height: 2px;
+                background: #d0cbea;
+                transform: scaleX(0);
+            }
+            &:hover{
+                &:before{
+                    transform: scaleX(1);
+                }
+            }
+            @media screen and (max-width: 768px){
+                font-size: 26px;
+                color: #fff;
+            }
+        }
+        @media screen and (max-width: 768px){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 0;
+            a{
+                font-weight: 700;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__phone{
+        a{
+            word-wrap: none;
+            min-width: 150px;
+            white-space: nowrap;
+            color: white;
+            font-family: proxima;
+            font-weight: 700;
+            font-size: 18px;
+            position: relative;
+            color: rgb(252, 184, 0);
+              
+            &:before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                transform-origin: 50% 50%;
+                transition: 0.3s;
+                background: rgb(252, 184, 0);
+                height: 2px;
+                transform: scaleX(0);
+            }
+            &:hover{
+                &:before{
+                    transform: scaleX(1);
+                }
+            }
+            @media screen and (max-width: 768px){
+                font-size: 26px;
+            }
+        }
+    }
+}

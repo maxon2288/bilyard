@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        {{> header/header}}
+
+        {{> breadcrumbs/breadcrumbs}}
+
+        <div class="wrapper contact-wrapper">
+            <div class="m-page-title">
+                Контакты
+            </div>
+
+            <a href="#" class="m-link-bottom politic">
+                Политика конфеденциальности
+            </a>
+        </div>
+
+        <div class="contact__items wrapper">
+            <div class="contact__item">
+                <div class="contact__title">телефон:</div>
+                <a href="#" class="contact__info">+7 (916) 721-36-30</a>
+            </div>
+
+            <div class="contact__item">
+                <div class="contact__title">адрес:</div>
+                <div class="contact__info">г. Москва, ул. Гагарина 56</div>
+            </div>
+
+            <div class="contact__item">
+                <div class="contact__title">время работы:</div>
+                <div class="contact__info">Пн - Вс  с 9:00 до 19:00</div>
+            </div>
+
+            <div class="contact__item">
+                <div class="contact__title">почта:</div>
+                <a href="#" class="contact__info">poolschool@gmail.com</a>
+            </div>
+        </div>
+
+        {{> map/map}}
+
+        {{> footer/ footer}}
+
+
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+
+        <div class="modal">
+            <div class="modal-close">
+                {{Icon iconName="close"}}
+            </div>
+            <div class="main-form__top">
+                <div class="main-form__title m-title">
+                        Записаться на пробное
+                        занятие
+                </div>
+                <div class="main-form__desc m-desc">Оставьте заявку и мы перезвоним вам</div>
+
+                <form id="my-form-modal" class="main-form" action="#" methos="post">
+                    <input style="background-image: url(../static/img/content/input-icon-1.png" 
+                    class="m-field " 
+                    type="name" 
+                    name="name" 
+                    placeholder="Ваше имя">
+
+                    <input style="background-image: url(../static/img/content/input-icon-2.png" 
+                    class="m-field " 
+                    type="phone" 
+                    name="phone" 
+                    placeholder="Ваш телефон">
+
+                    <button class="m-button modal-good-open  price__form-button">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+        </div> 
+
+        <div class="modal-good">
+            <div class="modal-close">
+                {{Icon iconName="close"}}
+            </div>
+            <div class="m-title">
+                Ожидайте звонка!
+            </div>
+        </div>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+</html>

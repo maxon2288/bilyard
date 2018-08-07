@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        {{> header/header}}
+
+        <div class="notfound wrapper">
+            <div class="notfound__left">
+                <div class="m-title">
+                        Извините, произошла ошибка
+                </div>
+                <div class="m-desc">
+                    Данной страницы не существует, пожалуйста проверьте строку поиска
+                    или начните поиск заново
+                </div>
+
+                <a href="#" class="m-link-bottom notfound__button">
+                    Главная страница
+                    {{Icon iconName="button-icon"}}
+                </a>
+            </div>
+
+            <div class="notfound__right">
+                404
+            </div>
+        </div>
+        
+        {{> footer/ footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+</html>

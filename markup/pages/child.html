@@ -1,0 +1,497 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        {{> header/header}}
+
+        <div class="main-content-container wrapper">
+
+            <div class="main-content__left left-sidebar">
+                <div class="main-content__left-bg">
+                    <img src="../../static/img/content/first-bg-3.jpg" alt="">
+                </div>
+
+                {{>breadcrumbs/breadcrumbs}}
+
+                <div class="main-title">
+                    Пул для детей
+                </div>
+
+                <div class="m-desc">
+                    Индивидуальные и групповые тренировки в Москве по русскому бильярду, пулу и снукеру. Каждое занятие состоит из теоретической 
+                    части, практики и тренировочной игры
+                </div>
+
+                <a href="#" class="m-button modal-open">
+                    Записаться
+                </a>
+
+            </div>
+
+            <div class="main-content">
+                
+                <div class="html">  
+
+                    <a href="#" class="back">
+                        {{Icon iconName="button-icon"}}
+                        Назад
+                    </a>
+                    <h1>Расписание детской группы</h1>      
+
+                    <table>
+                        <tr>
+                            <th>Понедельник</th>
+                            
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+
+                            
+                        </tr>
+
+                        <tr>
+                                <th>вторник</th>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                                
+                        </tr>
+
+                        <tr>
+
+                                <th>среда</th>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                                
+                        </tr>
+
+                        <tr>
+
+                                <th>четверг</th>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                                
+                        </tr>
+
+                        <tr>
+
+                                <th>пятница</th>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                                
+                        </tr>
+
+                        <tr>
+
+                                <th>суббота</th>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                                
+                        </tr>
+
+                        <tr>
+
+                            <th>воскресение</th>
+
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                            <td>17:00 – 19:00</td>
+                        </tr>
+
+                    </table>
+
+                    <div class="form">
+                        <form id="my-direction-form" action="#" methos="post">
+                            <fieldset>
+                                <legend>
+                                    <div class="m-title">
+                                        Посетите пробное занятие
+                                    </div>
+                                    <div class="m-desc">
+                                        Убедитесь, что направление вам по душе
+                                    </div>
+                                </legend>
+                                <div class="form__left">
+                                    <div class="form__title">
+                                        <img src="static/img/content/form-img.jpg" alt="">
+                                        
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="form__right-top">
+                                        <label>
+                                            <input type="radio" name="check" checked>
+                                            <div></div>
+                                            <p>Групповое занятие <span>бесплатно</span></p>
+                                        </label>
+                    
+                                        <label>
+                                            <input type="radio" name="check">
+                                            <div></div>
+                                            <p>Индивидуальное занятие <span>500 руб</span></p>
+                                        </label>
+                                        <div class="form__price">скидка 50%</div>
+                                </div>
+                                <div class="form__right-bottom">
+                                    <input style="background-image: url(../static/img/content/input-icon-1.png" 
+                                    class="m-field form__item" 
+                                    type="name" 
+                                    name="name" 
+                                    placeholder="Ваше имя">
+                
+                                    <input style="background-image: url(../static/img/content/input-icon-2.png" 
+                                    class="m-field form__item" 
+                                    type="phone" 
+                                    name="phone" 
+                                    placeholder="Ваш телефон">
+                
+                                    <button class="m-button form__item">
+                                        Записаться
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                    </div>
+
+                    <div class="m-title">
+                        Сколько стоит обучение?
+                    </div>
+
+                    <div class="price__content">
+
+                        <div class="price__column">
+                            <div class="price__item">
+                                <div class="price__top">
+                                    <div class="price__title">
+                                            «Индивидуальное занятие»
+                                    </div>
+                                    <div class="price__desc">
+                                            1 человек   
+                                    </div>
+                
+                                <table class="price__table">
+                                    <tr>
+                                        <td></td>
+                                        <td>Цена</td>
+                                        <td>Период</td>
+                                        <td>Кол-во <br> занятий:</td>
+                                        <td>Стоимость:</td>
+                                    </tr>
+            
+                                    <tr>
+                                        <td>1 зан-е</td>
+                                        <td>3000</td>
+                                        <td>1 день</td>
+                                        <td>1</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10 зан-й</td>
+                                        <td>2700</td>
+                                        <td>60 дней</td>
+                                        <td>10</td>
+                                        <td>27000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30 зан-й</td>
+                                        <td>2400</td>
+                                        <td>180 дней</td>
+                                        <td>30</td>
+                                        <td>72000</td>
+                                    </tr>
+                                </table>
+            
+                                <div class="price__caption">
+                                    <div>На 2-й раз в неделю - <span> скидка 20%.</span>
+                                        Это для тех, кто платит поразово и занимается раз 
+                                        в неделю, на второй раз на этой неделе будет скидка 
+                                        20%. То есть 1-й раз 4000 руб, второй раз 3200 руб.</div>
+            
+                                    <div class="m-button price__caption-button modal-open">Купить</div>
+                                </div>
+            
+                                
+            
+                                </div>
+                    
+                                <div class="price__button">
+                                    <div class="price__button-img">
+                                        <img src="static/img/content/button-arrow.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price__item">
+                                <div class="price__top">
+                                    <div class="price__title">
+                                            «Индивидуальное занятие»
+                                    </div>
+                                    <div class="price__desc">
+                                            1 человек   
+                                    </div>
+                
+                                <table class="price__table">
+                                    <tr>
+                                        <td></td>
+                                        <td>Цена</td>
+                                        <td>Период</td>
+                                        <td>Кол-во <br> занятий:</td>
+                                        <td>Стоимость:</td>
+                                    </tr>
+            
+                                    <tr>
+                                        <td>1 зан-е</td>
+                                        <td>3000</td>
+                                        <td>1 день</td>
+                                        <td>1</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10 зан-й</td>
+                                        <td>2700</td>
+                                        <td>60 дней</td>
+                                        <td>10</td>
+                                        <td>27000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30 зан-й</td>
+                                        <td>2400</td>
+                                        <td>180 дней</td>
+                                        <td>30</td>
+                                        <td>72000</td>
+                                    </tr>
+                                </table>
+            
+                                <div class="price__caption">
+                                    <div>На 2-й раз в неделю - <span> скидка 20%.</span>
+                                        Это для тех, кто платит поразово и занимается раз 
+                                        в неделю, на второй раз на этой неделе будет скидка 
+                                        20%. То есть 1-й раз 4000 руб, второй раз 3200 руб.</div>
+            
+                                    <div class="m-button price__caption-button modal-open">Купить</div>
+                                </div>
+            
+                                
+            
+                                </div>
+                    
+                                <div class="price__button">
+                                    <div class="price__button-img">
+                                        <img src="static/img/content/button-arrow.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price__column">
+                            <div class="price__item">
+                                <div class="price__top">
+                                    <div class="price__title">
+                                            «Индивидуальное занятие»
+                                    </div>
+                                    <div class="price__desc">
+                                            1 человек   
+                                    </div>
+                
+                                <table class="price__table">
+                                    <tr>
+                                        <td></td>
+                                        <td>Цена</td>
+                                        <td>Период</td>
+                                        <td>Кол-во <br> занятий:</td>
+                                        <td>Стоимость:</td>
+                                    </tr>
+            
+                                    <tr>
+                                        <td>1 зан-е</td>
+                                        <td>3000</td>
+                                        <td>1 день</td>
+                                        <td>1</td>
+                                        <td>3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10 зан-й</td>
+                                        <td>2700</td>
+                                        <td>60 дней</td>
+                                        <td>10</td>
+                                        <td>27000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30 зан-й</td>
+                                        <td>2400</td>
+                                        <td>180 дней</td>
+                                        <td>30</td>
+                                        <td>72000</td>
+                                    </tr>
+                                </table>
+            
+                                <div class="price__caption">
+                                    <div>На 2-й раз в неделю - <span> скидка 20%.</span>
+                                        Это для тех, кто платит поразово и занимается раз 
+                                        в неделю, на второй раз на этой неделе будет скидка 
+                                        20%. То есть 1-й раз 4000 руб, второй раз 3200 руб.</div>
+            
+                                    <div class="m-button price__caption-button modal-open">Купить</div>
+                                </div>
+            
+                                
+            
+                                </div>
+                    
+                                <div class="price__button">
+                                    <div class="price__button-img">
+                                        <img src="static/img/content/button-arrow.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galery">
+                        <div class="swiper-container-galery">
+                            <div class="swiper-wrapper galery-wrapper">
+                                <a href="../../static/img/content/galery-1.jpg" class="swiper-slide galery-wrapper">
+                                    <img src="../../static/img/content/galery-1.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+
+                                <a href="../../static/img/content/galery-2.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-2.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+
+                                <a href="../../static/img/content/galery-3.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-3.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+
+                                <a href="../../static/img/content/galery-4.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-4.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+
+                                <a href="../../static/img/content/galery-5.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-5.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+
+                                <a href="../../static/img/content/galery-6.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-6.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+                                <a href="../../static/img/content/galery-1.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-1.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+
+                                <a href="../../static/img/content/galery-2.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-2.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+
+
+                                <a href="../../static/img/content/galery-3.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-3.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+
+                                <a href="../../static/img/content/galery-4.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-4.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+
+                                <a href="../../static/img/content/galery-5.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-5.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+
+                                <a href="../../static/img/content/galery-6.jpg" class="swiper-slide">
+                                    <img src="../../static/img/content/galery-6.jpg" alt="">
+                                    {{Icon iconName="search"}}
+                                </a>
+                            </div>
+
+                            <div class="swiper-button-next">
+                                {{Icon iconName="button-icon"}}
+                            </div>
+                            <div class="swiper-button-prev">
+                                {{Icon iconName="button-icon"}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>О пуле</h2>
+
+                    <p>
+                        Программа обучения детей в нашей школе разделена на несколько этапов: от нулевого уровня, где обучение проходит в увлекательной игровой форме, и до индивидуальных тренировок, где каждый урок — это преодоление себя и шаг ребенка к титулу Чемпиона.
+                    </p>
+
+                    <p>Тренировки проходят в нескольких секциях в Москве и Калуге, адреса вы можете узнать в разделе Контакты. Программа обучения детей в нашей школе разделена на несколько этапов где обучение проходит в увлекательной игровой форме.</p>
+
+                </div>
+            </div>
+            
+        </div>
+
+        {{> map/map}}
+
+        {{> footer/ footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+
+        <div class="modal">
+            <div class="modal-close">
+                {{Icon iconName="close"}}
+            </div>
+            <div class="main-form__top">
+                <div class="main-form__title m-title">
+                        Записаться на пробное
+                        занятие
+                </div>
+                <div class="main-form__desc m-desc">Оставьте заявку и мы перезвоним вам</div>
+
+                <form id="my-form-modal" class="main-form" action="#" methos="post">
+                    <input style="background-image: url(../static/img/content/input-icon-1.png" 
+                    class="m-field " 
+                    type="name" 
+                    name="name" 
+                    placeholder="Ваше имя">
+
+                    <input style="background-image: url(../static/img/content/input-icon-2.png" 
+                    class="m-field " 
+                    type="phone" 
+                    name="phone" 
+                    placeholder="Ваш телефон">
+
+                    <button class="m-button modal-good-open  price__form-button">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+        </div> 
+
+        <div class="modal-good">
+            <div class="modal-close">
+                {{Icon iconName="close"}}
+            </div>
+            <div class="m-title">
+                Ожидайте звонка!
+            </div>
+        </div>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+.services{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .wrapper{
+        display: flex;
+        overflow: hidden;
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    .swiper-slide{
+        background-image: linear-gradient( 0deg, rgb(2,92,178) 0%,  transparent 100%);
+        background-color: transparent;
+        display: flex;
+        height: 100px;
+        img{
+            height: 100%;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .direction__tabs-title{
+        align-items: flex-end;
+        width: 100%;
+        margin-bottom: 35px;
+        margin-left: 35px;
+        display: flex;
+        &:hover{
+            text-decoration: none;
+        }
+        &:active{
+            opacity: 1;
+        }
+    }
+      
+    
+}

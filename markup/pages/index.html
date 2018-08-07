@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        {{> header-2/header-2}}
+
+        {{> first/first}}
+
+        {{> adv/adv}}
+        
+        {{> video/video}}
+
+        {{> direction/direction}}
+
+        {{> form/form}}
+
+        {{> train/train}}
+
+        {{> rate/rate}}
+
+        {{> lesson/lesson}}
+
+        {{> galery-slider/galery-slider}}
+
+        {{> price/price}}
+
+        {{> form/form}}
+
+        {{> services/services}}
+            
+        {{> reviews/reviews}}
+
+        {{> client/client}}
+
+        {{> map/map}}
+
+        {{> footer/ footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+.first{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 220px;
+    padding-bottom: 120px;
+    position: relative;
+    // background: linear-gradient(to right, #03539e 0%, rgba(1, 91, 176, 0.562) 50%, rgba(1, 91, 176, 0.555) 60%, transparent 100%);
+    background-color: rgba(2, 0, 36, 0.534);
+    &.first-center{
+        padding-bottom: 270px;
+        background: linear-gradient(to right, #023466 0%,transparent 100%);
+        .wrapper{
+            align-items: center;
+            justify-content: center;
+        }
+        .m-desc{
+            text-align: center; 
+            max-width: 765px;  
+            color: #fff;
+        }
+    }
+    .social{
+        @media screen and(max-width: 768px) {
+            display: none;   
+        }
+    }
+    @media screen and(max-width: 768px) {
+        padding-top: 140px;
+        padding-bottom: 60px;
+    }
+    .breadcrumbs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+    
+    
+    &__bg{
+        position: absolute;
+        top: 0;
+        background-size: cover;
+        z-index: -1;
+        left: 0;
+        width: 100%;
+        background-position: center center;
+        background-attachment: fixed;
+        height: 100%;
+    }
+    &__left{
+        max-width: 725px;
+        color: white;
+    }
+    
+    &__desc{
+        margin-bottom: 50px;
+        font-size: 18px;
+        color: #fff;    
+    }
+    &__button{
+        border-width: 2px;
+        border-color: rgb(252, 184, 0);
+        border-style: solid;
+        background-color: rgb(252, 184, 0);
+        max-width: 370px;
+        width: 100%;
+        height: 57px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 700;
+        box-shadow: 0 0 20px 3px #e2c575;
+        font-size: 18px;
+    }
+    &__social{
+        display: flex;
+        flex-direction: column;
+        height: 115px;
+        justify-content: space-between;
+        position: absolute;
+        right: 115px;
+        bottom: 40px;
+        a{
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+        @media screen and (max-width: 1440px){
+            right: 10px;
+        }
+    }
+}
+
+.main-title{
+    color: #fff;
+    font-family: proxima;
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    span{  
+        display: inline;
+        color: #eaae06;
+    }
+    @media screen and(max-width: 768px) {
+        font-size: 26px;
+    }
+}

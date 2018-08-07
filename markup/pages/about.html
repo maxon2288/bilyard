@@ -1,0 +1,194 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        {{> header-2/header-2}}
+
+        <div class="first first-center">
+
+            <div class="first__bg" style="background-image: url(../../static/img/content/first-img-2.jpg)"></div>
+
+            <div class="wrapper">
+                {{> breadcrumbs/breadcrumbs}}
+                <h1 class="main-title">
+                    О школе
+                </h1>
+
+                <div class="m-desc">
+                    Индивидуальные и групповые тренировки в Москве по русскому бильярду, пулу и снукеру
+                    Каждое занятие состоит из теоретической части, практики и тренировочной игры.
+                </div>
+            </div>
+
+        </div>
+
+        {{> adv/adv}}
+
+        {{> video/video}}
+
+        <div class="wrapper form">
+            <div class="form__left">
+                <div class="form__title">
+                    <img src="static/img/content/form-img.jpg" alt="">
+                    <div class="m-title">
+                        Посетите пробное занятие
+                    </div>
+                    <div class="m-desc">
+                        Убедитесь, что направление вам по душе
+                    </div>
+                </div>
+            </div>
+            <form id="my-direction-form" action="#" methos="post">
+                <div class="form__right-top">
+                    <label>
+                        <input type="radio" name="check" checked>
+                        <div></div>
+                        <p>Групповое занятие <span>бесплатно</span></p>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="check">
+                        <div></div>
+                        <p>Индивидуальное занятие <span>500 руб</span></p>
+                    </label>
+                    <div class="form__price">скидка 50%</div>
+                </div>
+                <div class="form__right-bottom">
+                    <input style="background-image: url(../static/img/content/input-icon-1.png" 
+                    class="m-field form__item" 
+                    type="name" 
+                    name="name" 
+                    placeholder="Ваше имя">
+
+                    <input style="background-image: url(../static/img/content/input-icon-2.png" 
+                    class="m-field form__item" 
+                    type="phone" 
+                    name="phone" 
+                    placeholder="Ваш телефон">
+
+                    <button class="m-button form__item">
+                        Записаться
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        {{> services/services}}
+
+        <div class="teaching wrapper">
+
+            <div class="teaching__item-container">
+
+                <div class="teaching__top teaching__item">
+                    <div class="m-title">
+                        Индивидуальное обучение
+                    </div>
+        
+                    <div class="m-desc">
+                        Каждое занятие состоит из теоретической части, практики 
+                        и тренировочной игры. В теоретической части рассказывается 
+                        об истории бильярда и  правилах игры практики.  Знакомят 
+                        с бильярдным оборудованием,  инвентарем, правилами их польза, 
+                        а также с основами теории бильярда.                    
+                    </div>
+                </div>
+    
+                <div class="teaching__bottom teaching__item">
+                    <div class="teaching__bottom-info">
+                        <div class="teaching__bottom-title">
+                                Время:
+                        </div>
+    
+                        <div class="teaching__bottom-desc">
+                                Ежедневно с 10.00 
+                                до 24.00 (без выходных)
+                        </div>
+                    </div>
+
+                    <div class="teaching__bottom-info">
+                        <div class="teaching__bottom-title">
+                                Длительность занятия:
+                        </div>
+    
+                        <div class="teaching__bottom-desc">
+                                2 академических часа 
+(90 минут)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="teaching__item-container">
+
+                <div class="teaching__top teaching__item">
+                    <div class="m-title">
+                            Групповое обучение
+                    </div>
+        
+                    <div class="m-desc">
+                        Каждое занятие состоит из теоретической части, практики 
+                        и тренировочной игры. В теоретической части рассказывается 
+                        об истории бильярда и  правилах игры практики.  Знакомят 
+                        с бильярдным оборудованием,  инвентарем, правилами их польза, 
+                        а также с основами теории бильярда.                    
+                    </div>
+                </div>
+    
+                <div class="teaching__bottom teaching__item">
+                    <div class="teaching__bottom-info">
+                        <div class="teaching__bottom-title">
+                                Время:
+                        </div>
+    
+                        <div class="teaching__bottom-desc">
+                                Ежедневно с 10.00 
+до 24.00 (без выходных)
+                        </div>
+                    </div>
+
+                    <div class="teaching__bottom-info">
+                        <div class="teaching__bottom-title">
+                                Длительность занятия:
+                        </div>
+    
+                        <div class="teaching__bottom-desc">
+                                2 академических часа (90 минут)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="wrapper html">
+            <h2>
+                О занятиях
+            </h2>
+
+            <p>
+                Каждое занятие состоит из теоретической части, практики и тренировочной игры. В теоретической части рассказывается об истории бильярда и правилах игры практики.  Знакомят с бильярдным оборудованием,  инвентарем, правилами их польза,  а также с основами теории бильярда. Каждое занятие состоит из теоретической части, практики и тренировочной игры. В теоретической части рассказывается об истории бильярда и правилах игры практики.  Знакомят с бильярдным оборудованием,  инвентарем, правилами их польза,  а также с основами теории бильярда.
+            </p>
+        </div>
+
+        {{> map/map}}
+
+        {{> footer/ footer}}
+
+        
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+</html>

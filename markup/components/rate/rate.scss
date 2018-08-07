@@ -1,0 +1,104 @@
+.rate{
+    background: url("../../static/img/content/rate-bg.jpg") no-repeat center center;
+    background-size: cover;
+    font-family: proxima;
+    padding: 35px 0;
+    .wrapper{
+        flex-direction: row;
+        @media screen and(max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__caption{
+        display: flex;
+        flex-direction: column;
+        color: white;   
+    }
+    &__title{
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        line-height: 1.2;
+    }
+    &__desc{
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        margin-top: 11px;
+    }
+    &__list{
+        align-items: center;
+        display: flex;
+        @media screen and(max-width: 1024px) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        @media screen and(max-width: 425px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        border-right: 2px solid #2873ba;
+        padding-left: 40px;
+        padding-right: 40px;
+        &:last-child{
+            border: none;
+        }
+        @media screen and(max-width: 1024px) {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 20px;
+            &:first-child{
+                padding-left: 0;
+            }
+        }
+        @media screen and(max-width: 425px) {
+            border-bottom: 1px solid #2873ba;
+            border-right: none;
+            padding-left: 0;
+            padding-right: 0;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    &__top{
+        font-size: 14px;
+        font-weight: 500;
+        color: rgb(87, 163, 235);
+        text-transform: uppercase;
+    }
+    &__bottom{
+        font-size: 20px;
+        color: rgb(252, 184, 0);
+        font-weight: bold;
+        display: flex;
+        margin-top: 15px;
+        @media screen and(max-width: 425px) {
+            margin-top: 0;
+            margin-left: 10px;
+        }
+        span{
+            margin-right: 15px; 
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-decoration: line-through;
+            line-height: 1.2;
+        }
+    }
+    &__button{
+        a{
+            width: 270px;
+        }
+        @media screen and(max-width: 375px) {
+            width: 100%;
+            a{
+                width: 100%;
+            }
+        }
+    }
+}

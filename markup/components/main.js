@@ -342,14 +342,31 @@
 var trainSlider3 = new Swiper('.train-slider', {
     spaceBetween: 30,
     slidesPerView: 'auto',
-    speed: 400, 
+    speed: 700, 
     loop: true,
+    slidesOffsetBefore: 730,
     navigation: {
         nextEl: '.train__button.swiper-button-next',
         prevEl: '.train__button.swiper-button-prev',
     },
+    breakpoints: {
+        1024: {
+            slidesOffsetBefore: 430,
 
+        },
+        768: {
+            slidesOffsetBefore: 0,
+
+        },
+    }
 });
+
+$('.train-slider .swiper-slide').on('click', function(e){
+    e.preventDefault();
+    console.log($(this).index());
+    trainSlider3.slideTo($(this).index());
+    return false;   
+  });
 
 trainSlider3.on('slideChangeTransitionEnd', function () {
     var title = $(".swiper-slide-active img").data('title');
@@ -360,6 +377,16 @@ trainSlider3.on('slideChangeTransitionEnd', function () {
     $(".train__desc").html(desc);
     $(".train__content").html(content);
     
+});
+
+$(document).ready(function() {
+    var title = $(".swiper-slide-active img").data('title');
+        var desc = $(".swiper-slide-active img").data('desc');
+        var content = $(".swiper-slide-active img").data('content');
+        
+        $(".train__title").html(title);
+        $(".train__desc").html(desc);
+        $(".train__content").html(content);
 });
 
 var trainSlider2 = new Swiper('.tab-slider', {

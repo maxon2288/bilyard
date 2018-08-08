@@ -232,6 +232,11 @@ label {
     @media screen and(max-width: 768px) {
         margin: 10px 0;
     }
+    &:hover{
+        p{
+            color: #fcb800;
+        }
+    }
 	input {
 		display: none;
 		&:checked {
@@ -247,11 +252,11 @@ label {
         font-size: 18px;
         font-weight: 500;
         color: rgb(2, 92, 178);
-       
+       transition: 0.2s;
         span{
             margin-left: 15px;
             font-size: 18px;
-            color: rgb(252, 184, 0);
+            color: #fcb800;
             font-weight: bold;
             text-transform: uppercase;
             line-height: 1.2;

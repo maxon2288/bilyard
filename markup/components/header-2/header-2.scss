@@ -100,10 +100,11 @@
                 transform-origin: 50% 50%;
                 transition: 0.3s;
                 height: 2px;
-                background: #d0cbea;
+                background: #fcb800;
                 transform: scaleX(0);
             }
             &:hover{
+                color: #fcb800;
                 &:before{
                     transform: scaleX(1);
                 }

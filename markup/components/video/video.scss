@@ -12,9 +12,19 @@
         border-radius: 10px;
         overflow: hidden;  
         margin-top: 15px;
+        transition: 0.3s ease-out;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-sizing: content-box;
+        padding: 10px;
+        img{
+            display: none;
+        }
         @media screen and(max-width: 1024px) {
             height: 350px;
         }
+
         @media screen and(max-width: 768px) {
             height: 250px;
         }
@@ -25,7 +35,17 @@
             left: 0;
             bottom: 0;
             right: 0;
+            transition: 0.3s;
             background-color: #025db283;
+        }
+        &:hover {
+            border-radius: 30px;
+            &:before{
+                background-color: #025db273;
+            }
+            .video__button{
+                transform: translate(-50%, -50%) scale(1.1);
+            }
         }
         img{
             top: 0;
@@ -51,9 +71,12 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        margin: 0;
         transform: translate(-50%, -50%);
+        transform-origin: 50% 50%;
         box-shadow: 0px 5px 17.1px 0.9px #e7e5f9;
         cursor: pointer;
+        margin-top: 0;
+        z-index: 101;
+        
     }
 }

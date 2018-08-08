@@ -425,13 +425,11 @@ img{
 	flex-direction: row;
 	justify-content: space-between;
 	position: relative;	
-	
 }
 
 .main-content{
-	max-width: 855px;
+	width: 70%;
 	margin-top: 40px;
-	width: 100%;
 	position: relative;
 	margin-left: auto;
 	&__right{
@@ -440,7 +438,7 @@ img{
 		height: 100%;
 	}
 	&__left{
-		max-width: 415px;
+		width: 26.7%;
 		background-size: cover;
 		position: relative;
 		height: 110vh;
@@ -749,6 +747,7 @@ legend{
 	}
 	.delimiter{
 		margin-right: 5px;
+		margin-left: 5px;
 	}
 }
 
@@ -930,6 +929,11 @@ hr{
 			margin-bottom: 10px;
 		}
 	}
+	@media screen and(max-width: 425px) {
+		margin-top: 30px;
+		margin-top: 30px;
+		
+	}
 	&__item{
 		padding: 35px;
 	}
@@ -1042,7 +1046,6 @@ hr{
 			.shop__img{
 				border-color: transparent;
 				background-color: #eef7ff;
-				
 			}
 			.shop__button{
 				opacity: 1;
@@ -1053,6 +1056,26 @@ hr{
 					
 				}
 			}
+		}
+	}
+	&__button{
+		@media screen and(max-width: 1024px) {
+			display: flex;
+			opacity: 1;
+		}
+		
+	}
+	&__title{
+		svg{
+			@media screen and(max-width: 1024px) {
+				opacity: 1;
+			}
+		}
+	}
+	&__img{
+		@media screen and(max-width: 1024px) {
+			border-color: transparent;
+			background-color: #eef7ff;
 		}
 	}
 	&__img{
@@ -1071,6 +1094,7 @@ hr{
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
+		margin-top: 30px;
 		justify-content: space-between;
 	}
 	

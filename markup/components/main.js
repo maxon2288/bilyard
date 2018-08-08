@@ -408,7 +408,7 @@ var trainSlider1 = new Swiper('.swiper-container-galery', {
 
 
 
-$('.shop__img, .reviews__slide, reviews-2__slide, .galery-block-slide, .main-content__left-bg').each(function(){
+$('.services .swiper-slide, .shop__img, .video__block, .reviews__slide, reviews-2__slide, .galery-block-slide, .main-content__left-bg').each(function(){
     var goodsImg = $(this).find('img').attr('src');
     $(this).css('background-image','url('+goodsImg+')');
 });

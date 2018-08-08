@@ -63,6 +63,7 @@
             opacity: 0;
             transform: translate(100%);
             transition: 0.5s;
+            margin-top: 0;
             &.visible{
                 visibility: visible;
                 opacity: 1;

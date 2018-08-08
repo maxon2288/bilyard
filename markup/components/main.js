@@ -343,6 +343,7 @@ var trainSlider3 = new Swiper('.train-slider', {
     spaceBetween: 30,
     slidesPerView: 'auto',
     speed: 400, 
+    loop: true,
     navigation: {
         nextEl: '.train__button.swiper-button-next',
         prevEl: '.train__button.swiper-button-prev',
@@ -362,7 +363,6 @@ trainSlider3.on('slideChangeTransitionEnd', function () {
 });
 
 var trainSlider2 = new Swiper('.tab-slider', {
-    slidesPerView: 5,
     slidesPerView: 'auto',
     speed: 400,
 });

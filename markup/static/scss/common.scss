@@ -889,8 +889,15 @@ hr{
 	table{
 		min-width: 800px;
 		width: 100%;
-		display: flex;
+		display: table;
 		margin: 0;
+		tr{
+			min-width: 100%;
+			display: table-row;
+		}
+		td{
+			display: table-cell;	
+		}
 	}
 }
 
@@ -920,6 +927,7 @@ hr{
 		width: 48%;
 		@media screen and(max-width: 760px) {
 			width: 100%;
+			margin-bottom: 10px;
 		}
 	}
 	&__item{
@@ -938,6 +946,13 @@ hr{
 		justify-content: space-between;
 		&-info{
 			max-width: 250px;
+			@media screen and(max-width: 425px) {
+				margin-bottom: 40px;
+				max-width: 100%;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
 		}
 		&-title{
 			font-size: 14px;
@@ -950,6 +965,10 @@ hr{
 			color: rgb(2, 92, 178);
 			font-weight: 700;
 			margin-top: 15px;
+		}
+		@media screen and(max-width: 425px) {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 	@media screen and(max-width: 760px) {
@@ -975,6 +994,7 @@ hr{
 	&__items{
 		width: 100%;
 		position: relative;
+		overflow: hidden;
 		&:before{
 			content: '';
 			position: absolute;

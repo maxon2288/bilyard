@@ -2,13 +2,13 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 260px;
-    padding-bottom: 170px;
     position: relative;
+    height:100vh;
+    display: flex;
+    align-items: center;
     background: linear-gradient(to right, #035aac 0%, rgba(1, 91, 176, 0.562) 20%, transparent 100%);
     background-color: rgba(2, 0, 36, 0.479);
     &.first-center{
-        padding-bottom: 270px;
         background: linear-gradient(to right, #035aac 0%, rgba(1, 91, 176, 0.562) 20%, transparent 100%);
         background-color: rgba(2, 0, 36, 0.479);
         .wrapper{
@@ -21,18 +21,17 @@
             color: #fff;
         }
     }    
+    .wrapper{
+        margin-top: 50px;
+    }
     .social{
         @media screen and(max-width: 768px) {
             display: none;   
         }
     }
-    @media screen and(max-height: 700px) {
-        padding-bottom: 120px;
-        padding-top: 220px;
-    }
     @media screen and(max-width: 768px) {
-        padding-top: 140px;
-        padding-bottom: 60px;
+    }
+    @media screen and(max-height: 574px) {
     }
     .breadcrumbs{
         width: 100%;
@@ -40,18 +39,18 @@
         justify-content: center;
         margin-top: 0;
     }
-    
-    
     &__bg{
         position: absolute;
         top: 0;
-        background-size: cover;
         z-index: -1;
         left: 0;
         width: 100%;
-        background-position: center center;
+        height: 100%;   
         background-attachment: fixed;
-        height: 100%;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translate3d(0,0,0);
     }
     &__left{
         max-width: 725px;

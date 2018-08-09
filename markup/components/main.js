@@ -406,6 +406,16 @@ var trainSlider1 = new Swiper('.swiper-container-galery', {
 
 });
 
+$(function() {
+    var el = $('.first__bg');
+    $(window).on('scroll', function () {
+        var scroll = $(document).scrollTop();
+        el.css({
+            'background-position':'50% '+(-.4*scroll)+'px'
+        });
+    });
+});
+
 
 
 $('.services .swiper-slide, .shop__img, .video__block, .reviews__slide, reviews-2__slide, .galery-block-slide, .main-content__left-bg').each(function(){

@@ -425,20 +425,31 @@ img{
 	flex-direction: row;
 	justify-content: space-between;
 	position: relative;	
+	@media screen and(max-width: 600px) {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .main-content{
-	width: 70%;
+	max-width: 855px;
 	margin-top: 40px;
+	width: 100%;
 	position: relative;
 	margin-left: auto;
+	@media screen and(max-width: 1300px) {
+		max-width: 700px;
+	}
+	@media screen and(max-width: 768px) {
+		max-width: 500px;
+	}
 	&__right{
 		margin-top: 40px;
 		margin-left: 20px;
 		height: 100%;
 	}
 	&__left{
-		width: 26.7%;
+		max-width: 415px;
 		background-size: cover;
 		position: relative;
 		height: 110vh;
@@ -447,6 +458,9 @@ img{
 		z-index: 1;
 		flex-direction: column;
 		justify-content: center;
+		@media screen and(max-width: 600px) {
+			overflow: hidden;
+		}
 		.m-button{
 			margin-top: 50px;
 		}
@@ -478,18 +492,53 @@ img{
 .left-sidebar{
 	transition: all ease-in-out .3s;
 	padding-right: 20px;
+	@media screen and(max-width: 1300px) {
+		max-width: 280px;
+	}
+	@media screen and(max-width: 768px) {
+		max-width: 220px;	
+	}
+	@media screen and(max-width: 600px) {
+		max-width: 120%;
+		margin: 0 -10px;
+		padding: 0 10px;
+		overflow: hidden;
+		position: relative;
+		z-index: -1;
+	}
 	img{
 		display: none;
+	}
+	.main-title{
+		font-size: 34px;
+	}
+	.m-button{
+		margin-top: 20px;
+		margin-bottom: 90px;
+	}
+	.breadcrumbs{
+		margin-top: 10px;
 	}
 	&.fixed{
 		position: fixed;
 		top: 0;
-		z-index: 1;
+		z-index: 0;
+		@media screen and(max-width: 600px) {
+			position: relative;
+			overflow: hidden;
+			display: flex;
+		}
 	}
 	&.bottom{
-		bottom: 0;
+		bottom: 1;
 		position: absolute;
+		bottom: 0;
 		top: auto;
+		@media screen and(max-width: 600px) {
+			position: relative;
+			overflow: hidden;
+			display: flex;
+		}
 	}
 }
 
@@ -507,6 +556,14 @@ fieldset{
 	}
 	.form__left{
 		height: auto;
+	}
+	.form-right-top{
+		@media screen and(max-width: 767px) {
+			align-items: flex-start;
+			.form__price{
+				align-self: flex-start;
+			}
+		}
 	}
 	.form__price{
 		display: flex;
@@ -526,6 +583,10 @@ fieldset{
 		p{
 			margin-top: 0 !important;
 		}
+	}
+	@media screen and(max-width: 767px) {
+		padding: 0 10px;
+		padding-bottom: 10px;
 	}
 }
 

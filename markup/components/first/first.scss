@@ -24,14 +24,10 @@
     .wrapper{
         margin-top: 50px;
     }
-    .social{
+    &__social{
         @media screen and(max-width: 768px) {
             display: none;   
         }
-    }
-    @media screen and(max-width: 768px) {
-    }
-    @media screen and(max-height: 574px) {
     }
     .breadcrumbs{
         width: 100%;
@@ -94,6 +90,9 @@
         }
         @media screen and (max-width: 1440px){
             right: 10px;
+        }
+        @media screen and(max-width: 768px) {
+            display: none;
         }
     }
 }

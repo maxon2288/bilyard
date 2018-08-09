@@ -230,7 +230,7 @@
 
     $(".modal-open").click(function (e) {
         e.preventDefault();
-        $(".modal-sign, .overlay").addClass("visible");
+        $(".modal.modal-sign, .overlay").addClass("visible");
     });
 
     $(".modal-shop-open").click(function (e) {
@@ -242,8 +242,13 @@
     //попупы
     //------------------
 
+
     $('.html table').each(function () {
         $(this).wrap('<div class="main-table-container"></div>');
+    });
+
+    $('.html img').each(function () {
+        $(this).wrap('<figure class="html-img"></figure>');
     });
 
     new WOW({
@@ -262,6 +267,9 @@
             nextEl: '.reviews__container .swiper-button-next',
             prevEl: '.reviews__container .swiper-button-prev',
         },
+        keyboard: {
+            enabled: true,
+          },
         breakpoints: {
             1020: {
                 slidesPerView: 2,
@@ -280,6 +288,9 @@
             nextEl: '.services-slider .swiper-button-next',
             prevEl: '.services-slider .swiper-button-prev',
         },
+        keyboard: {
+            enabled: true,
+          },
         breakpoints: {
             1020: {
                 slidesPerView: 2,
@@ -298,6 +309,9 @@
             nextEl: '.galery-slider .swiper-button-next',
             prevEl: '.galery-slider .swiper-button-prev',
         },
+        keyboard: {
+            enabled: true,
+          },
         breakpoints: {
             1020: {
                 slidesPerView: 2,
@@ -316,6 +330,9 @@
             nextEl: '.client__button-next',
             prevEl: '.client__button-prev',
         },
+        keyboard: {
+            enabled: true,
+          },
         breakpoints: {
             1023: {
                 slidesPerView: 4,
@@ -349,6 +366,9 @@ var trainSlider3 = new Swiper('.train-slider', {
         nextEl: '.train__button.swiper-button-next',
         prevEl: '.train__button.swiper-button-prev',
     },
+    keyboard: {
+        enabled: true,
+      },
     breakpoints: {
         1024: {
             slidesOffsetBefore: 430,
@@ -392,16 +412,31 @@ $(document).ready(function() {
 var trainSlider2 = new Swiper('.tab-slider', {
     slidesPerView: 'auto',
     speed: 400,
+    keyboard: {
+        enabled: true,
+      },
 });
 
-var trainSlider1 = new Swiper('.swiper-container-galery', {
+var galerySlider = new Swiper('.swiper-container-galery', {
     spaceBetween: 10,
     slidesPerView: 2,
     slidesPerColumn: 3,
     speed: 400,
+    autoplay: {
+        delay: 2000,
+    },
+    keyboard: {
+        enabled: true,
+      },
     navigation: {
-        nextEl: 'swiper-container-galery .swiper-button-next',
-        prevEl: 'swiper-container-galery .swiper-button-prev',
+        nextEl: '.swiper-container-galery .swiper-button-next',
+        prevEl: '.swiper-container-galery .swiper-button-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 1,
+            slidesPerColumn: 1,
+        },
     },
 
 });
@@ -418,7 +453,7 @@ $(function() {
 
 
 
-$('.services .swiper-slide, .shop__img, .video__block, .reviews__slide, reviews-2__slide, .galery-block-slide, .main-content__left-bg').each(function(){
+$('.swiper-container-galery .swiper-slide, .services .swiper-slide, .shop__img, .video__block, .reviews__slide, reviews-2__slide, .galery-block-slide, .main-content__left-bg').each(function(){
     var goodsImg = $(this).find('img').attr('src');
     $(this).css('background-image','url('+goodsImg+')');
 });

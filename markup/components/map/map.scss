@@ -61,7 +61,13 @@
             position: static;
             background-color: #eef7ff;
             text-align: center;
-            box-shadow: none;
+            box-shadow: none;  
+            left: 0;
+            top: 0;
+            transform: none;
+            max-width: 100%;
+            width: 100%;
+
         }
         .m-field{
             background-color: #fff;

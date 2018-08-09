@@ -6,7 +6,6 @@
             },
             phone: {
                 required: true,
-                 digits: true,
             },
             messages: {
                 required: false,
@@ -45,7 +44,6 @@
             },
             phone: {
                 required: true,
-                 digits: true,
             },
             messages: {
                 required: false,
@@ -85,7 +83,6 @@
             },
             phone: {
                 required: true,
-                 digits: true,
             },
             messages: {
                 required: false,
@@ -124,7 +121,6 @@
             },
             phone: {
                 required: true,
-                 digits: true,
             },
             messages: {
                 required: false,
@@ -164,7 +160,6 @@
             },
             phone: {
                 required: true,
-                 digits: true,
             },
             messages: {
                 required: false,

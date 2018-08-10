@@ -5,13 +5,14 @@
     align-items: flex-start;
     z-index: 1;
     padding-top: 10px;
-    padding-bottom: 27px;
+    padding-bottom: 10px;
     z-index: 100000;
+    transition: 0.3s;
     .wrapper{
         position: relative;
         display: flex;
+        align-items: center;
         flex-direction: row;
-        align-items: flex-start;
     }
     &__close{
         cursor: pointer;
@@ -102,6 +103,12 @@
                 transform: scaleX(0);
             }
             &:hover{
+                color: #fcb800;
+                &:before{
+                    transform: scaleX(1);
+                }
+            }
+            &.active{
                 color: #fcb800;
                 &:before{
                     transform: scaleX(1);

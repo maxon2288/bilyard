@@ -36,6 +36,8 @@
         },
     });
 
+    
+
     $('#my-form-modal').validate({
         rules: {
             email: {
@@ -190,11 +192,15 @@
         },
     });
 
+    
+
     $(".header-2__menu-open").click(function() {
+        $('body').css('overflow-y', 'hidden');
         $(".header-2__right, .humburger-overlay").addClass('visible')
     });
 
     $(".header__menu-open").click(function() {
+        $('body').css('overflow-y', 'hidden');
         $(".header__right,  .humburger-overlay").addClass('visible')
     });
 
@@ -216,20 +222,24 @@
     $(".modal-good").removeClass("visible");
 
     $(".overlay, .modal-close, .header__close, .header-2__close, .humburger-overlay").click(function () {
+        $('body').css('overflow-y', 'scroll');
         $(".modal-sign, .modal-shop, .overlay, .modal-good, .header__right, .header-2__right, .humburger-overlay").removeClass("visible");
     });
 
     $(".humburger-overlay, .modal-close, .header__close").click(function () {
+        $('body').css('overflow-y', 'scroll');
         $(".modal-sign, .modal-shop, .humburger-overlay, .modal-good, .header__right").removeClass("visible");
     });
 
     $(".modal-open").click(function (e) {
         e.preventDefault();
+        $('body').css('overflow-y', 'hidden');
         $(".modal.modal-sign, .overlay").addClass("visible");
     });
 
     $(".modal-shop-open").click(function (e) {
         e.preventDefault();
+        $('body').css('overflow-y', 'hidden');
         $(".modal-shop, .overlay").addClass("visible");
     });
 
@@ -472,3 +482,17 @@ $(window).scroll(function () {
         $('.left-sidebar').removeClass('bottom');
     }
 });
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() >= 0) {
+        $('.top-anchor').addClass('visible');
+    } else {
+        $('.top-anchor').removeClass('visible');
+    };
+});
+
+$('.top-anchor').click(function (e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop: 0},500);
+});
+

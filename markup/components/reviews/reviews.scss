@@ -16,6 +16,13 @@
     .m-page-title{
         margin-bottom: 20px;
     }
+    .swiper-slide-vid{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &__container{
         padding-top: 90px;
         margin-top: -90px;

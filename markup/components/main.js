@@ -1,3 +1,9 @@
+
+var selector = $('input[name="phone"');
+
+var im = new Inputmask("+ 9 9999999999");
+im.mask(selector);
+
     $('#my-form').validate({
         rules: {
             email: {
@@ -27,6 +33,7 @@
                 processData: false,
                 contentType: false,
                 success: function() {
+                    document.$('#my-form').reset();
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
                     $('#my-price-form').trigger( 'reset' );
@@ -67,6 +74,7 @@
                 processData: false,
                 contentType: false,
                 success: function() {
+                    document.$('#my-form-modal').reset();
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
                     $('#my-price-form').trigger( 'reset' );
@@ -97,6 +105,7 @@
         errorPlacement: function (error, element) {},
 
             submitHandler: function() {
+
                 var form_data = $(this).serialize(); //собераем все данные из формы
                 $.ajax({
                     type: "POST", //Метод отправки
@@ -106,6 +115,7 @@
                     processData: false,
                     contentType: false,
                     success: function() {
+                        document.$('#my-form-map').reset();
                         $(".modal").removeClass('visible');
                         $(".modal-good, .overlay").addClass('visible');
                         $('#my-price-form').trigger( 'reset' );
@@ -144,6 +154,7 @@
                 processData: false,
                 contentType: false,
                 success: function() {
+                    document.$('#my-price-form').reset();
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
                     $('#my-price-form').trigger( 'reset' );
@@ -153,6 +164,7 @@
         },
         
         });
+
 
     $('#my-direction-form').validate({
         rules: {
@@ -183,6 +195,7 @@
                 processData: false,
                 contentType: false,
                 success: function() {
+                    document.$('#my-direction-form').reset();
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
                     $('#my-price-form').trigger( 'reset' );

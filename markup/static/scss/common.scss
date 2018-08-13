@@ -1092,6 +1092,34 @@ hr{
 			transition: 0.3s;
 		}
 	}
+	&__icon-desc{
+		background-color: rgba(2, 92, 178, 0.75);
+		opacity: 0.749;
+		width: 271px;
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		color: #fff;
+		transition: .3s;
+		top: 30px;
+		left: 100%;
+		border-radius: 10px;
+		padding: 30px;
+			&-title{
+				font-size: 16px;
+			}
+			&-params{
+				margin-top: 15px;
+				color: #d8dbed;
+				font-size: 16px;
+			}
+		img{
+			position: absolute;
+			top: -10px;
+			left: 10px;
+
+		}
+	}
 	&__img img{
 		display: none;
 	}
@@ -1113,6 +1141,12 @@ hr{
 			margin-left: 10px;
 			opacity: 0;
 			transition: 0.3s;
+		}
+		&:hover{
+			.shop__icon-desc{
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 	&__item{

@@ -46,7 +46,7 @@
     &__slide{
         border-radius: 10px;
         height: 355px;
-        max-width: 350px;
+        max-width: 33%;
         display: flex;
         position: relative;
         cursor: pointer;
@@ -141,14 +141,11 @@
     }
     .swiper-slide{
         img{
-            filter: blur(3px);
-            opacity: 0.6;
+            transform: scale(0.9) translateY(20px);
         }
     }
     .swiper-slide-active{
-
         img{
-            opacity: 1;
             filter: blur(0px);
             transform: scale(1.1);
         }

@@ -60,7 +60,7 @@
     border: 6px solid transparent;
     z-index: 1000001; }
   [class*="hint--"]:after {
-    background: rgba(0, 102, 198,0.7);
+    background: $bl;
     color: white;
     padding: 8px 10px;
     border-radius: 10px;
@@ -104,7 +104,7 @@
   border-top-color: #383838; }
 
 .hint--bottom-left:before {
-  border-bottom-color: rgba(57, 134, 172, 0.7); }
+  border-bottom-color: $bl }
 
 .hint--bottom-right:before {
   border-bottom-color: #383838; }

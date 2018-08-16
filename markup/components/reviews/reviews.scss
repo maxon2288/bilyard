@@ -240,12 +240,16 @@
         transition: 0.3s;
         cursor: pointer;
         &-min{
-            max-width: 445px;   
-            width: 100%;
+            width: 65%;
+            @media screen and(max-width: 780px) {
+                width: 100%;
+            }
         }
         &-big{
-            max-width: 825px;
-            width: 100%;
+            width: 32%;
+            @media screen and(max-width: 780px) {
+                width: 100%;
+            }
         }
         &:hover{
             background-color: $bl;

@@ -1,8 +1,5 @@
 
-var selector = $('input[name="phone"');
-
-var im = new Inputmask("+ 9 9999999999");
-im.mask(selector);
+$('input[name="phone"]').mask('+ 9 999 999 99 99');
 
     $('#my-form').validate({
         rules: {
@@ -33,10 +30,9 @@ im.mask(selector);
                 processData: false,
                 contentType: false,
                 success: function() {
-                    document.$('#my-form').reset();
+                    $(this).trigger( 'reset' );
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
-                    $('#my-price-form').trigger( 'reset' );
                     setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
                 }
             });
@@ -74,11 +70,9 @@ im.mask(selector);
                 processData: false,
                 contentType: false,
                 success: function() {
-                    document.$('#my-form-modal').reset();
+                    $(this).trigger( 'reset' );
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
-                    $('#my-price-form').trigger( 'reset' );
-                    setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
                 }
             });
         },
@@ -104,25 +98,23 @@ im.mask(selector);
 
         errorPlacement: function (error, element) {},
 
-            submitHandler: function() {
-
-                var form_data = $(this).serialize(); //собераем все данные из формы
-                $.ajax({
-                    type: "POST", //Метод отправки
-                    url: '/mail.php', //путь до php фаила отправителя
-                    data: form_data,
-                    cache: false,
-                    processData: false,
-                    contentType: false,
-                    success: function() {
-                        document.$('#my-form-map').reset();
-                        $(".modal").removeClass('visible');
-                        $(".modal-good, .overlay").addClass('visible');
-                        $('#my-price-form').trigger( 'reset' );
-                        setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
-                    }
-                });
-            },
+        submitHandler: function() {
+            var form_data = $(this).serialize(); //собераем все данные из формы
+            $.ajax({
+                type: "POST", //Метод отправки
+                url: '/mail.php', //путь до php фаила отправителя
+                data: form_data,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function() {
+                    $(this).trigger( 'reset' );
+                    $(".modal").removeClass('visible');
+                    $(".modal-good, .overlay").addClass('visible');
+                    setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
+                }
+            });
+        },
     });
 
     $('#my-price-form').validate({
@@ -154,10 +146,9 @@ im.mask(selector);
                 processData: false,
                 contentType: false,
                 success: function() {
-                    document.$('#my-price-form').reset();
+                    $(this).trigger( 'reset' );
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
-                    $('#my-price-form').trigger( 'reset' );
                     setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
                 }
             });
@@ -195,10 +186,9 @@ im.mask(selector);
                 processData: false,
                 contentType: false,
                 success: function() {
-                    document.$('#my-direction-form').reset();
+                    $(this).trigger( 'reset' );
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
-                    $('#my-price-form').trigger( 'reset' );
                     setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
                 }
             });
@@ -376,10 +366,10 @@ im.mask(selector);
 
 var trainSlider3 = new Swiper('.train-slider', {
     spaceBetween: 30,
-    slidesPerView: 'auto',
+    slidesPerView: 3,
     speed: 700, 
     loop: true,
-    slidesOffsetBefore: 730,
+    slidesOffsetBefore: 670,
     navigation: {
         nextEl: '.train__button.swiper-button-next',
         prevEl: '.train__button.swiper-button-prev',
@@ -390,11 +380,12 @@ var trainSlider3 = new Swiper('.train-slider', {
     breakpoints: {
         1024: {
             slidesOffsetBefore: 430,
+            slidesPerView: 2,
 
         },
         768: {
             slidesOffsetBefore: 0,
-
+            slidesPerView: 1,
         },
     }
 });
@@ -459,15 +450,15 @@ var galerySlider = new Swiper('.swiper-container-galery', {
 
 });
 
-$(function() {
-    var el = $('.first__bg');
-    $(window).on('scroll', function () {
-        var scroll = $(document).scrollTop();
-        el.css({
-            'background-position':'50% '+(-.4*scroll)+'px'
-        });
-    });
-});
+// $(function() {
+//     var el = $('.first__bg');
+//     $(window).on('scroll', function () {
+//         var scroll = $(document).scrollTop();
+//         el.css({
+//             'background-position':'50% '+(-.4*scroll)+'px'
+//         });
+//     });
+// });
 
 
 

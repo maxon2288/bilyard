@@ -9,6 +9,11 @@
     align-items: center;
     height: 100vh;
     background-image: -ms-linear-gradient( 0deg, rgba(4,85,167, 0.78) 0%, rgba(4,85,167,0.78) 100%);
+    @media screen and(max-width: 700px) {
+        height: auto;
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
     &.first-center{
         background: linear-gradient(to right, #035aac 0%, rgba(1, 91, 176, 0.562) 20%, transparent 100%);
         background-color: rgba(2, 0, 36, 0.479);

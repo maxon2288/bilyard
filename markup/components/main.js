@@ -195,8 +195,6 @@ $('input[name="phone"]').mask('+ 9 999 999 99 99');
         },
     });
 
-    
-
     $(".header-2__menu-open").click(function() {
         $('body').css('overflow-y', 'hidden');
         $(".header-2__right, .humburger-overlay").addClass('visible')

@@ -1,9 +1,7 @@
 .direction{
-    font-family: proxima;
-    padding-top: 55px;
-    padding-bottom: 85px;
-    overflow-x: hidden;
-    .wrapper{
+    &.wrapper{
+        padding-top: 55px;
+        padding-bottom: 85px;
         display: flex;
         flex-direction: column;
         align-items: flex-start
@@ -29,7 +27,6 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end; 
-        overflow-y: scroll;
         position: relative;
         overflow: hidden;
         background-color: #025cb2;
@@ -61,16 +58,18 @@
         }
         
     }
+    .tabs{
+        min-height: 100%;
+    }
     &__content{
         width: 100%;
+        min-height: 100%;
     }
     &__tabs-title{
         font-size: 24px;
         color: rgb(255, 255, 255);
         font-weight: bold;
-        line-height: 1.2;
-    }
-    &__desc{
+        line-height: 1.2;   
     }
     &__tabs{
         display: flex;
@@ -84,6 +83,10 @@
         @media screen and(max-width: 767px) {
             
         }
+        &--active{
+            display: flex;
+        }
+        
     }
     &__desc{
         color: #d8dbed;
@@ -304,11 +307,12 @@ label {
 
 .tab-slider{
     width: 100%;
+    height: 100%;
 }
 
 .tab__elem{
     margin-right: 0;
-    &.ui-tabs-active{
+    &--active{
         .tab__link{
             color: rgb(252, 184, 0);
             &:before{
@@ -316,6 +320,7 @@ label {
             }
         }
     }
+        
     &.tab-slide{
         background: transparent;
         width: auto;
@@ -332,6 +337,7 @@ label {
     text-transform: uppercase;
     line-height: 1.2;
     position: relative;
+    cursor: pointer;
     min-width: 150px;
     display: flex;
     justify-content: center;    

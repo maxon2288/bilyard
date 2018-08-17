@@ -205,7 +205,7 @@ $('input[name="phone"]').mask('+ 9 999 999 99 99');
         $(".header__right,  .humburger-overlay").addClass('visible')
     });
 
-    $(".reviews__wrapper").lightGallery();
+    $(".reviews__slide").lightGallery();
     $(".about__right").lightGallery();
     $(".video__block").lightGallery();
     $(".galery-wrapper").lightGallery();
@@ -460,7 +460,7 @@ var galerySlider = new Swiper('.swiper-container-galery', {
 
 
 
-$('.swiper-container-galery .swiper-slide, .services .swiper-slide, .shop__img, .video__block, .reviews__slide, reviews-2__slide, .galery-block-slide, .main-content__left-bg').each(function(){
+$('.swiper-container-galery .swiper-slide, .m-img-cont, .services .swiper-slide, .shop__img, .video__block, .reviews__slide, reviews-2__slide, .galery-block-slide, .main-content__left-bg').each(function(){
     var goodsImg = $(this).find('img').attr('src');
     $(this).css('background-image','url('+goodsImg+')');
 });

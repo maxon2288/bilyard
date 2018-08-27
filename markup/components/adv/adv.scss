@@ -9,17 +9,14 @@
         @media screen and(max-width: 1024px) {
             flex-wrap: wrap;   
         }
+        @media screen and(max-width: 767px) {
+            padding-bottom: 40px;
+        }
         
     }
     &__item{
         width: 33%;
         display: flex;
-        &:nth-child(2){
-            margin-left: 10px;
-            @media screen and(max-width: 768px) {
-                margin-left: 0;
-            }
-        }
         @media screen and(max-width: 1024px) {
             flex-direction: column;
         }

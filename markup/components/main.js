@@ -1,11 +1,7 @@
+      $('input[name="phone"]').mask('0 000 000 00 00');
 
-
-
-    $('input[name="phone').simpleMask( { 
-        'mask': '+ # ### ### ## ##',
-    });
     
-    $('#my-form').validate({
+    $('#form-blue').validate({
         rules: {
             email: {
                 required: false,
@@ -13,17 +9,11 @@
             },
             phone: {
                 required: true,
-                length: {
-                    minimum: 12,
-                    maximum: 12,
-                },
+                
             },
             messages: {
                 required: false,
             },
-            name: {
-                required: true,
-            }
         },
 
         errorPlacement: function (error, element) {},
@@ -38,15 +28,24 @@
                 processData: false,
                 contentType: false,
                 success: function() {
-                    $(this).trigger( 'reset' );
+                    $("input[name='phone'], input[name='name'], input[name='email']").val(''); 
+                    
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
-                    setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
                 }
             });
         },
     });
 
+    $('.modal-open').on('click', function(event) {
+        event.preventDefault();
+        if ($(this).hasClass("modal-turnir")) {
+            $('.overlay, .modal-sign').addClass('visible');
+            $('.modal-sign').addClass('modal-turnir');
+            $('.main-form__title').text('Хотите организовать турнир или принять участие?');
+        }
+    });
+    
     $('#my-form-modal').validate({
         rules: {
             email: {
@@ -56,12 +55,6 @@
             phone: {
                 required: true,
             },
-            messages: { 
-                required: false,
-            },
-            name: {
-                required: true,
-            }
         },
 
         errorPlacement: function (error, element) {},
@@ -76,8 +69,10 @@
                 processData: false,
                 contentType: false,
                 success: function() {
-                    $(this).trigger( 'reset' );
+                    $("input[name='phone'], input[name='name'], input[name='email']").val(''); 
+                    
                     $(".modal").removeClass('visible');
+                    $('body').css('overflow-y', 'hidden');
                     $(".modal-good, .overlay").addClass('visible');
                 }
             });
@@ -85,42 +80,40 @@
 
     });
 
-    $('#my-form-sidebar').validate({
-        rules: {
-            email: {
-                required: false,
-                email: true,
-            },
-            phone: {
-                required: true,
-            },
-            messages: { 
-                required: false,
-                required: true,
-            },
-            name: {
-            }
-        },
+    // $('#my-form-sidebar').validate({
+    //     rules: {
+    //         email: {
+    //             required: false,
+    //             email: true,
+    //         },
+    //         phone: {
+    //             required: true,
+    //         },
+    //         messages: { 
+    //             required: false,
+    //             required: true,
+    //         },
+    //     },
 
-        errorPlacement: function (error, element) {},
+    //     errorPlacement: function (error, element) {},
 
-        submitHandler: function() {
-            var form_data = $(this).serialize(); //собераем все данные из формы
-            $.ajax({
-                type: "POST", //Метод отправки
-                url: '/mail.php', //путь до php фаила отправителя
-                data: form_data,
-                cache: false,
-                processData: false,
-                contentType: false,
-                success: function() {
-                    $(this).trigger( 'reset' );
-                    $(".modal-good, .overlay").addClass('visible');
-                }
-            });
-        },
+    //     submitHandler: function() {
+    //         var form_data = $(this).serialize(); //собераем все данные из формы
+    //         $.ajax({
+    //             type: "POST", //Метод отправки
+    //             url: '/mail.php', //путь до php фаила отправителя
+    //             data: form_data,
+    //             cache: false,
+    //             processData: false,
+    //             contentType: false,
+    //             success: function() {
+    //                 $(this).trigger( 'reset' );
+    //                 $(".modal-good, .overlay").addClass('visible');
+    //             }
+    //         });
+    //     },
 
-    });
+    // });
 
     $('#my-form-shop').validate({
         rules: {
@@ -130,13 +123,11 @@
             },
             phone: {
                 required: true,
+                
             },
             messages: { 
                 required: false,
             },
-            name: {
-                required: true,
-            }
         },
 
         errorPlacement: function (error, element) {},
@@ -150,8 +141,9 @@
                 cache: false,
                 processData: false,
                 contentType: false,
-                success: function() {
-                    $(this).trigger( 'reset' );
+                success: function() {                    
+                    $("input[name='phone'], input[name='name'], input[name='email']").val(''); 
+                    
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
                 }
@@ -168,13 +160,11 @@
             },
             phone: {
                 required: true,
+                
             },
             messages: {
                 required: false,
             },
-            name: {
-                required: true,
-            }
         },
 
         errorPlacement: function (error, element) {},
@@ -189,11 +179,10 @@
                 processData: false,
                 contentType: false,
                 success: function() {
-                    $(this).trigger( 'reset' );
-                    $(".modal").removeClass('visible');
+                    $("input[name='phone'], input[name='name'], input[name='email']").val(''); 
+                    
                     $(".modal-good, .overlay").addClass('visible');
-                    setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
-                }
+                },
             });
         },
     });
@@ -206,13 +195,11 @@
             },
             phone: {
                 required: true,
+                
             },
             messages: {
                 required: false,
             },
-            name: {
-                required: true,
-            }
         },
 
         errorPlacement: function (error, element) {},
@@ -227,10 +214,10 @@
                 processData: false,
                 contentType: false,
                 success: function() {
-                    $(this).trigger( 'reset' );
+                    $("input[name='phone'], input[name='name'], input[name='email']").val(''); 
+                    
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
-                    setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
                 }
             });
         },
@@ -246,13 +233,11 @@
 
             phone: {
                 required: true,
+                
             },
             messages: {
                 required: false,
             },
-            name: {
-                required: true,
-            }
         },
 
         errorPlacement: function (error, element) {},
@@ -267,17 +252,16 @@
                 processData: false,
                 contentType: false,
                 success: function() {
-                    $(this).trigger( 'reset' );
+                    $("input[name='phone'], input[name='name'], input[name='email']").val('');                     
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
-                    setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
                 }
             });
         },
 
     });
 
-    $('#my-direction-form-2').validate({
+    $('.direction-form').validate({
         rules: {
             email: {
                 required: false,
@@ -285,13 +269,11 @@
             },
             phone: {
                 required: true,
+                
             },
             messages: {
                 required: false,
             },
-            name: {
-                required: true,
-            }
         },
 
         errorPlacement: function (error, element) {},
@@ -306,14 +288,15 @@
                 processData: false,
                 contentType: false,
                 success: function() {
-                    $(this).trigger( 'reset' );
+                    $("input[name='phone'], input[name='name'], input[name='email']").val(''); 
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
-                    setTimeout(function() { $(".modal-good, .overlay").removeClass('visible'); }, 2000);
                 }
             });
         },
     });
+
+
 
     //--------------------------------
     //forms---------------------------
@@ -406,7 +389,7 @@
             },
             425: {
                 slidesPerView: 1,
-            }
+            },
         },
     });
 
@@ -491,7 +474,7 @@ var trainSlider3 = new Swiper('.train-slider', {
     slidesPerView: 3,
     speed: 700, 
     loop: true,
-    slidesOffsetBefore: 670,
+    slidesOffsetBefore: 710,
     navigation: {
         nextEl: '.train__button.swiper-button-next',
         prevEl: '.train__button.swiper-button-prev',
@@ -499,7 +482,11 @@ var trainSlider3 = new Swiper('.train-slider', {
     keyboard: {
         enabled: true,
       },
+    
     breakpoints: {
+        1400: {
+            slidesOffsetBefore: 660,
+        },
         1024: {
             slidesOffsetBefore: 430,
             slidesPerView: 2,

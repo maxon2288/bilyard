@@ -215,7 +215,6 @@
                 contentType: false,
                 success: function() {
                     $("input[name='phone'], input[name='name'], input[name='email']").val(''); 
-                    
                     $(".modal").removeClass('visible');
                     $(".modal-good, .overlay").addClass('visible');
                 }
@@ -261,42 +260,44 @@
 
     });
 
-    $('.direction-form').validate({
-        rules: {
-            email: {
-                required: false,
-                email: true,
-            },
-            phone: {
-                required: true,
-                
-            },
-            messages: {
-                required: false,
-            },
-        },
 
-        errorPlacement: function (error, element) {},
-
-        submitHandler: function() {
-            var form_data = $(this).serialize(); //собераем все данные из формы
-            $.ajax({
-                type: "POST", //Метод отправки
-                url: '/mail.php', //путь до php фаила отправителя
-                data: form_data,
-                cache: false,
-                processData: false,
-                contentType: false,
-                success: function() {
-                    $("input[name='phone'], input[name='name'], input[name='email']").val(''); 
-                    $(".modal").removeClass('visible');
-                    $(".modal-good, .overlay").addClass('visible');
-                }
-            });
-        },
+    $('.direction-form').each(function(){
+        var it = $(this);
+        it.validate({
+            rules: {
+                email: {
+                    required: false,
+                    email: true,
+                },
+                phone: {
+                    required: true,
+                    
+                },
+                messages: {
+                    required: false,
+                },
+            },
+    
+            errorPlacement: function (error, element) {},
+    
+            submitHandler: function() {
+                var form_data = $(this).serialize(); //собераем все данные из формы
+                $.ajax({
+                    type: "POST", //Метод отправки
+                    url: '/mail.php', //путь до php фаила отправителя
+                    data: form_data,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success: function() {
+                        $("input[name='phone'], input[name='name'], input[name='email']").val(''); 
+                        $(".modal").removeClass('visible');
+                        $(".modal-good, .overlay").addClass('visible');
+                    }
+                });
+            },
+        });
     });
-
-
 
     //--------------------------------
     //forms---------------------------
@@ -475,6 +476,7 @@ var trainSlider3 = new Swiper('.train-slider', {
     speed: 700, 
     loop: true,
     slidesOffsetBefore: 710,
+    reverseDirection: true,
     navigation: {
         nextEl: '.train__button.swiper-button-next',
         prevEl: '.train__button.swiper-button-prev',
@@ -485,7 +487,7 @@ var trainSlider3 = new Swiper('.train-slider', {
     
     breakpoints: {
         1400: {
-            slidesOffsetBefore: 660,
+            slidesOffsetBefore: 650,
         },
         1024: {
             slidesOffsetBefore: 430,
@@ -496,26 +498,35 @@ var trainSlider3 = new Swiper('.train-slider', {
             slidesOffsetBefore: 0,
             slidesPerView: 1,
         },
+    },
+
+});     
+
+$ ('.train-slider'). on ('click', '.swiper-slide', function (e) {
+    e.stopPropagation ();
+    var index = $ (this) .index ();
+    if (trainSlider3.activeIndex === index + 1 || 2) {
+        e.preventDefault ();
+        trainSlider3.slidePrev ();
+    }
+    else if (trainSlider3.activeIndex === index - 1 || 2) {
+        e.preventDefault ();
+        trainSlider3.slideNext ();
     }
 });
-
-$('.train-slider .swiper-slide').on('click', function(e){
-    e.preventDefault();
-    console.log($(this).index());
-    trainSlider3.slideTo($(this).index());
-    return false;   
-  });
 
 trainSlider3.on('slideChangeTransitionEnd', function () {
     var title = $(".swiper-slide-active img").data('title');
     var desc = $(".swiper-slide-active img").data('desc');
     var content = $(".swiper-slide-active img").data('content');
-    
+
     $(".train__title").html(title);
     $(".train__desc").html(desc);
     $(".train__content").html(content);
     
 });
+
+// trainSlider3.slideTo(3); 
 
 $(document).ready(function() {
     var title = $(".swiper-slide-active img").data('title');
